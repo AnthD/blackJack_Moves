@@ -3,16 +3,16 @@ namespace BlackJackCountingCards
 {
     public class SuitesDiamond:ISuites
     {
-			private string name;
+			//private string name;
 			private string pic;
 
 			public string Name
 			{
 				get
 				{
-					return this.name = "Diamonds";
+					return  "Diamonds";
 				}
-
+            
 			}
 			public string Pic
 			{

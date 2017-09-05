@@ -9,24 +9,19 @@ namespace BlackJackCountingCards
         public static void Main(string[] args)
         {
 
-            PackOfCards myCards = new PackOfCards();
-            //  Card[] Cardpack = new Card[10];
-            //Console.WriteLine("Hello World! \n");
-            Console.WriteLine("Card name is: {0}, CardType is : {1}", myCards.getCardPack()[51].getCardName(), myCards.getCardPack()[51].TheCardType);
 
-
-
-            //foreach (var item in myCards.getCardPack())
-            //{
-            //    Console.WriteLine("Card Name is:{0} ", item.getCardName());
-            //    Console.WriteLine("Card type is:{0} ", item.TheCardType);
-            //    Console.WriteLine("Card type is:{0} ", item.CardRank);
-            //    Console.WriteLine("Out put of cards {0} \n", item.TheCardType);
-            //}
-
-
-
-
+            //Creating Deck of Cards object
+            DeckOfCards myDeck = new DeckOfCards();
+            
+            // Outputing List of Cards in Deck
+            foreach (var item in myDeck.GetSuitOfCards(myDeck.PackClubs))
+            {
+                Console.WriteLine("Card Name is:{0} ", item.getCardName());
+                Console.WriteLine("Card Value is:{0} ", item.CardValue);
+                Console.WriteLine("Card type is:{0} ", item.TheCardType);
+                Console.WriteLine("Card type is:{0} ", item.CardRank);
+                Console.WriteLine("Out put of cards {0} \n", item.TheCardType);
+            }
 
 
         }

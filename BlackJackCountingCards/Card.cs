@@ -7,6 +7,7 @@ namespace BlackJackCountingCards
         private int cardValue;
         private CardType cardType;
         //private int cardRank;
+       // string NoSuite = "Suiteless";
         ISuites cardSuite;
 
         public enum CardType
@@ -17,11 +18,23 @@ namespace BlackJackCountingCards
             King,
             Ace
         }
-/*================ Card Checking Static =============================*/
+        /*================ CARD CONSTRUCTOR  =============================*/
+        public Card()
+        {
 
            
 
-/*================ Card CardType get set rank =============================*/
+        }
+
+
+       public Card(ISuites mCardSuite)
+        {
+            this.cardSuite = mCardSuite;
+        }
+
+
+
+        /*================ Card CardType get set rank =============================*/
         public CardType TheCardType
         {
             get
@@ -61,8 +74,9 @@ namespace BlackJackCountingCards
 
 /*================ Method Sets the suit of the card =============================*/
 
-        public void GetCardSuite( ISuites newSuite)
+        public void GetCardSuite( ISuites newSuite )
         {
+            
             this.cardSuite = newSuite;
            
         }
@@ -75,14 +89,13 @@ namespace BlackJackCountingCards
         {
             CardType checkReg = CardType.Regurlar;
             if (checkReg != this.cardType) return royalCardName(this.cardType);
-   
-            return this.cardName = cardValue.ToString()+" "+ cardSuite.Name ;
+            return this.cardName = cardValue.ToString()+" "+ this.cardSuite.Name;
         }
 
         public string  royalCardName(CardType royalType)
         {
-          
-            return this.cardName = royalType.ToString() + " " + cardSuite.Name;
+
+            return this.cardName = royalType.ToString() + " " + this.cardSuite.Name;
           
         }
 

@@ -3,7 +3,7 @@ namespace BlackJackCountingCards
 {
     public interface ISuites
     {
-
+        
 		string Name
 		{
 			get;

@@ -33,6 +33,12 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPackCards.cs" />
+    <Compile Include="PackCardsClubs.cs" />
+    <Compile Include="PackCardsDiamonds.cs" />
+    <Compile Include="PackCardsHeart.cs" />
+    <Compile Include="PackCardsNoSuit.cs" />
+    <Compile Include="PackCardsSpades.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ISuites.cs" />
@@ -41,10 +47,11 @@
     <Compile Include="SuitesSpades.cs" />
     <Compile Include="SuitesHearts.cs" />
     <Compile Include="Card.cs" />
-    <Compile Include="PackOfCards.cs" />
+    <Compile Include="DeckOfCards.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
