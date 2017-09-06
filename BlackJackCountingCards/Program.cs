@@ -48,19 +48,19 @@ namespace BlackJackCountingCards
                
                 switch (userAct)
                 {
-                    case '0':
+                    //case '0':
+                    //    card1 = mycard[0];
+                    //    Console.WriteLine("First card is: {0}", card1.getCardName());
+                    //    Console.WriteLine("choose second card:");
+                    //    mykey = Console.ReadLine();
+                    //    userAct2 = Convert.ToChar(mykey.ToLower().Trim());
+                    //    //----------------------------------------
+
+                    //    //Console.WriteLine("you pressed Q");
+                    //    break;
+
+                    case '2':
                         card1 = mycard[0];
-                        Console.WriteLine("First card is: {0}", card1.getCardName());
-                        Console.WriteLine("choose second card:");
-                        mykey = Console.ReadLine();
-                        userAct2 = Convert.ToChar(mykey.ToLower().Trim());
-                        //----------------------------------------
-
-                        //Console.WriteLine("you pressed Q");
-                        break;
-
-                    case '1':
-                        card1 = mycard[1];
                         Console.WriteLine("First card is: {0}", card1.getCardName());
                         Console.WriteLine("choose second card:");
                         mykey = Console.ReadLine();
@@ -69,7 +69,16 @@ namespace BlackJackCountingCards
                         //Console.WriteLine("you pressed W");
                         break;
 
-                    case '2':
+                    case '3':
+                        card1 = mycard[1];
+                        Console.WriteLine("First card is: {0}", card1.getCardName());
+                        Console.WriteLine("choose second card:");
+                        mykey = Console.ReadLine();
+                        userAct2 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '4':
                         card1 = mycard[2];
                         Console.WriteLine("First card is: {0}", card1.getCardName());
                         Console.WriteLine("choose second card:");
@@ -78,9 +87,88 @@ namespace BlackJackCountingCards
                         //----------------------------------------
                         //Console.WriteLine("you pressed W");
                         break;
-
-
-                    case '3':
+                    case '5':
+                        card1 = mycard[3];
+                        Console.WriteLine("First card is: {0}", card1.getCardName());
+                        Console.WriteLine("choose second card:");
+                        mykey = Console.ReadLine();
+                        userAct2 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '6':
+                        card1 = mycard[4];
+                        Console.WriteLine("First card is: {0}", card1.getCardName());
+                        Console.WriteLine("choose second card:");
+                        mykey = Console.ReadLine();
+                        userAct2 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '7':
+                        card1 = mycard[5];
+                        Console.WriteLine("First card is: {0}", card1.getCardName());
+                        Console.WriteLine("choose second card:");
+                        mykey = Console.ReadLine();
+                        userAct2 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '8':
+                        card1 = mycard[6];
+                        Console.WriteLine("First card is: {0}", card1.getCardName());
+                        Console.WriteLine("choose second card:");
+                        mykey = Console.ReadLine();
+                        userAct2 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '9':
+                        card1 = mycard[7];
+                        Console.WriteLine("First card is: {0}", card1.getCardName());
+                        Console.WriteLine("choose second card:");
+                        mykey = Console.ReadLine();
+                        userAct2 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 't':
+                        card1 = mycard[8];
+                        Console.WriteLine("First card is: {0}", card1.getCardName());
+                        Console.WriteLine("choose second card:");
+                        mykey = Console.ReadLine();
+                        userAct2 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 'j':
+                        card1 = mycard[9];
+                        Console.WriteLine("First card is: {0}", card1.getCardName());
+                        Console.WriteLine("choose second card:");
+                        mykey = Console.ReadLine();
+                        userAct2 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 'q':
+                        card1 = mycard[10];
+                        Console.WriteLine("First card is: {0}", card1.getCardName());
+                        Console.WriteLine("choose second card:");
+                        mykey = Console.ReadLine();
+                        userAct2 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 'k':
+                        card1 = mycard[11];
+                        Console.WriteLine("First card is: {0}", card1.getCardName());
+                        Console.WriteLine("choose second card:");
+                        mykey = Console.ReadLine();
+                        userAct2 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 'a':
                         card1 = mycard[12];
                         Console.WriteLine("First card is: {0}", card1.getCardName());
                         Console.WriteLine("choose second card:");
@@ -94,29 +182,29 @@ namespace BlackJackCountingCards
 
                 switch (userAct2)
                 {
-                    case '0':
-                        card2 = mycard[0];
-                        Console.WriteLine("Second card is: {0}", card2.getCardName());
-                        Console.WriteLine("choose dealer card:");
-                        mykey = Console.ReadLine();
-                        userAct3 = Convert.ToChar(mykey.ToLower().Trim());
-                        //----------------------------------------
+                    //case '0':
+                    //    card2 = mycard[0];
+                    //    Console.WriteLine("Second card is: {0}", card2.getCardName());
+                    //    Console.WriteLine("choose dealer card:");
+                    //    mykey = Console.ReadLine();
+                    //    userAct3 = Convert.ToChar(mykey.ToLower().Trim());
+                    //    //----------------------------------------
 
-                        //Console.WriteLine("you pressed Q");
-                        break;
+                    //    //Console.WriteLine("you pressed Q");
+                    //    break;
 
-                    case '1':
-                        card2 = mycard[1];
-                        Console.WriteLine("Second card is: {0}", card2.getCardName());
-                        Console.WriteLine("choose dealer card:");
-                        mykey = Console.ReadLine();
-                        userAct3 = Convert.ToChar(mykey.ToLower().Trim());
+                    //case '1':
+                    //    card2 = mycard[0];
+                    //    Console.WriteLine("Second card is: {0}", card2.getCardName());
+                    //    Console.WriteLine("choose dealer card:");
+                    //    mykey = Console.ReadLine();
+                    //    userAct3 = Convert.ToChar(mykey.ToLower().Trim());
 
-                        //Console.WriteLine("you pressed W");
-                        break;
+                    //    //Console.WriteLine("you pressed W");
+                    //    break;
 
                     case '2':
-                        card2 = mycard[2];
+                        card2 = mycard[0];
                         Console.WriteLine("Second card is: {0}", card2.getCardName());
                         Console.WriteLine("choose dealer card:");
                         mykey = Console.ReadLine();
@@ -126,6 +214,105 @@ namespace BlackJackCountingCards
                         break;
 
                     case '3':
+                        card2 = mycard[1];
+                        Console.WriteLine("Second card is: {0}", card2.getCardName());
+                        Console.WriteLine("choose dealer card:");
+                        mykey = Console.ReadLine();
+                        userAct3 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '4':
+                        card2 = mycard[2];
+                        Console.WriteLine("Second card is: {0}", card2.getCardName());
+                        Console.WriteLine("choose dealer card:");
+                        mykey = Console.ReadLine();
+                        userAct3 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '5':
+                        card2 = mycard[3];
+                        Console.WriteLine("Second card is: {0}", card2.getCardName());
+                        Console.WriteLine("choose dealer card:");
+                        mykey = Console.ReadLine();
+                        userAct3 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '6':
+                        card2 = mycard[4];
+                        Console.WriteLine("Second card is: {0}", card2.getCardName());
+                        Console.WriteLine("choose dealer card:");
+                        mykey = Console.ReadLine();
+                        userAct3 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '7':
+                        card2 = mycard[5];
+                        Console.WriteLine("Second card is: {0}", card2.getCardName());
+                        Console.WriteLine("choose dealer card:");
+                        mykey = Console.ReadLine();
+                        userAct3 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '8':
+                        card2 = mycard[6];
+                        Console.WriteLine("Second card is: {0}", card2.getCardName());
+                        Console.WriteLine("choose dealer card:");
+                        mykey = Console.ReadLine();
+                        userAct3 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '9':
+                        card2 = mycard[7];
+                        Console.WriteLine("Second card is: {0}", card2.getCardName());
+                        Console.WriteLine("choose dealer card:");
+                        mykey = Console.ReadLine();
+                        userAct3 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 't':
+                        card2 = mycard[8];
+                        Console.WriteLine("Second card is: {0}", card2.getCardName());
+                        Console.WriteLine("choose dealer card:");
+                        mykey = Console.ReadLine();
+                        userAct3 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 'j':
+                        card2 = mycard[9];
+                        Console.WriteLine("Second card is: {0}", card2.getCardName());
+                        Console.WriteLine("choose dealer card:");
+                        mykey = Console.ReadLine();
+                        userAct3 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 'q':
+                        card2 = mycard[10];
+                        Console.WriteLine("Second card is: {0}", card2.getCardName());
+                        Console.WriteLine("choose dealer card:");
+                        mykey = Console.ReadLine();
+                        userAct3 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 'k':
+                        card2 = mycard[11];
+                        Console.WriteLine("Second card is: {0}", card2.getCardName());
+                        Console.WriteLine("choose dealer card:");
+                        mykey = Console.ReadLine();
+                        userAct3 = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 'a':
                         card2 = mycard[12];
                         Console.WriteLine("Second card is: {0}", card2.getCardName());
                         Console.WriteLine("choose dealer card:");
@@ -134,26 +321,36 @@ namespace BlackJackCountingCards
                         //----------------------------------------
                         //Console.WriteLine("you pressed W");
                         break;
+                    
+
 
                 }
 
                 switch(userAct3)
                 {
                    
-                    case '0':
-                        DealerCard = mycard[0];
+                    //case '0':
+                    //    DealerCard = mycard[0];
 
-                    Console.WriteLine("Dealer card is: {0}", DealerCard.getCardName());
-                    Console.WriteLine("press x to exit and get your best choise of what to do");
-                    mykey = Console.ReadLine();
-                    userAct = Convert.ToChar(mykey.ToLower().Trim());
+                    //Console.WriteLine("Dealer card is: {0}", DealerCard.getCardName());
+                    //Console.WriteLine("press x to exit and get your best choise of what to do");
+                    //mykey = Console.ReadLine();
+                    //userAct = Convert.ToChar(mykey.ToLower().Trim());
                     //----------------------------------------
 
                     //Console.WriteLine("you pressed Q");
-                    break;
-
-                    case '1':
+                    //break;
+                    case '2':
                         DealerCard = mycard[0];
+                        Console.WriteLine("Deal card is: {0}", DealerCard.getCardName());
+                        Console.WriteLine("press x to exit and get your best choise of what to do");
+                        mykey = Console.ReadLine();
+                        userAct = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '3':
+                        DealerCard = mycard[1];
                         Console.WriteLine("Deal card is: {0}", DealerCard.getCardName());
                         Console.WriteLine("press x to exit and get your best choise of what to do");
                         mykey = Console.ReadLine();
@@ -162,7 +359,7 @@ namespace BlackJackCountingCards
                     //Console.WriteLine("you pressed W");
                     break;
 
-                    case '2':
+                    case '4':
                         DealerCard = mycard[2];
                         Console.WriteLine("Deal card is: {0}", DealerCard.getCardName());
                         Console.WriteLine("press x to exit and get your best choise of what to do");
@@ -172,7 +369,88 @@ namespace BlackJackCountingCards
                     //Console.WriteLine("you pressed W");
                     break;
 
-                    case '3':
+                    case '5':
+                        DealerCard = mycard[3];
+                        Console.WriteLine("Deal card is: {0}", DealerCard.getCardName());
+                        Console.WriteLine("press x to exit and get your best choise of what to do");
+                        mykey = Console.ReadLine();
+                        userAct = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '6':
+                        DealerCard = mycard[4];
+                        Console.WriteLine("Deal card is: {0}", DealerCard.getCardName());
+                        Console.WriteLine("press x to exit and get your best choise of what to do");
+                        mykey = Console.ReadLine();
+                        userAct = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '7':
+                        DealerCard = mycard[5];
+                        Console.WriteLine("Deal card is: {0}", DealerCard.getCardName());
+                        Console.WriteLine("press x to exit and get your best choise of what to do");
+                        mykey = Console.ReadLine();
+                        userAct = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '8':
+                        DealerCard = mycard[6];
+                        Console.WriteLine("Deal card is: {0}", DealerCard.getCardName());
+                        Console.WriteLine("press x to exit and get your best choise of what to do");
+                        mykey = Console.ReadLine();
+                        userAct = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case '9':
+                        DealerCard = mycard[7];
+                        Console.WriteLine("Deal card is: {0}", DealerCard.getCardName());
+                        Console.WriteLine("press x to exit and get your best choise of what to do");
+                        mykey = Console.ReadLine();
+                        userAct = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 't':
+                        DealerCard = mycard[8];
+                        Console.WriteLine("Deal card is: {0}", DealerCard.getCardName());
+                        Console.WriteLine("press x to exit and get your best choise of what to do");
+                        mykey = Console.ReadLine();
+                        userAct = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 'j':
+                        DealerCard = mycard[9];
+                        Console.WriteLine("Deal card is: {0}", DealerCard.getCardName());
+                        Console.WriteLine("press x to exit and get your best choise of what to do");
+                        mykey = Console.ReadLine();
+                        userAct = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 'q':
+                        DealerCard = mycard[10];
+                        Console.WriteLine("Deal card is: {0}", DealerCard.getCardName());
+                        Console.WriteLine("press x to exit and get your best choise of what to do");
+                        mykey = Console.ReadLine();
+                        userAct = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 'k':
+                        DealerCard = mycard[11];
+                        Console.WriteLine("Deal card is: {0}", DealerCard.getCardName());
+                        Console.WriteLine("press x to exit and get your best choise of what to do");
+                        mykey = Console.ReadLine();
+                        userAct = Convert.ToChar(mykey.ToLower().Trim());
+                        //----------------------------------------
+                        //Console.WriteLine("you pressed W");
+                        break;
+                    case 'a':
                         DealerCard = mycard[12];
                         Console.WriteLine("Deal card is: {0}", DealerCard.getCardName());
                         Console.WriteLine("press x to exit and get your best choise of what to do");

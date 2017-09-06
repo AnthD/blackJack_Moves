@@ -34,8 +34,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardContext.cs" />
-    <Compile Include="HandActions.cs" />
     <Compile Include="HardHands.cs" />
+    <Compile Include="IHandActions.cs" />
     <Compile Include="IHandState.cs" />
     <Compile Include="IPackCards.cs" />
     <Compile Include="PackCardsClubs.cs" />
