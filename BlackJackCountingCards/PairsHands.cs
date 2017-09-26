@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace BlackJackCountingCards
 {
-    class PairsHands : IHandState
+   class PairsHands : IHandState
     {
         Card myCard1;
         Card myCard2;
         Card dealerCard;
+        string actionMssg;
         IHandActions handActhion;
         public PairsHands(Card Card1, Card Card2, Card DealerCard)
         {
@@ -19,7 +20,7 @@ namespace BlackJackCountingCards
             this.dealerCard = DealerCard;
 
         }
-        public void doAction(CardContext context)
+        public string doAction(CardContext context)
         {
             context.setCardState(this);
             //Console.WriteLine("This the Pairs hands");
@@ -33,64 +34,76 @@ namespace BlackJackCountingCards
             if (myCard1.TheCardType == Card.CardType.Ace)
             {
                 handActhion = new Split();
-                Console.WriteLine("Your Pair Hands value is: {0}, Always SPlit on pare of  {1} {2}  ", myCardVules, myCard1.getCardName(), myCard2.getCardName());
-
+                //Console.WriteLine("Your Pair Hands value is: {0}, Always SPlit on pare of  {1} {2}  ", myCardVules, myCard1.getCardName(), myCard2.getCardName());
+                actionMssg = string.Format("Your Pair Hands value is: {0}, Always SPlit on pare of  {1} {2}  ", myCardVules, myCard1.getCardName(), myCard2.getCardName());
 
             }
             else if ((myCard1.CardValue == 2  || myCard1.CardValue == 3) && dealerCardValue >=4 && dealerCardValue <=6  )
             {
                 handActhion = new Split();
-                Console.WriteLine("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
-
+               // Console.WriteLine("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
+                actionMssg = string.Format("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
             }
             else if ((myCard1.CardValue == 5) && dealerCardValue >= 2 && dealerCardValue <= 9 )
             {
                 handActhion = new DoubleDown();
-                Console.WriteLine("Your Pair Hands value is: {0}, Always Double Down on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
-
+                //Console.WriteLine("Your Pair Hands value is: {0}, Always Double Down on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
+                actionMssg = string.Format("Your Pair Hands value is: {0}, Always Double Down on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
             }
             else if ((myCard1.CardValue == 6) && dealerCardValue >= 2 && dealerCardValue <= 6)
             {
                 handActhion = new Split();
-                Console.WriteLine("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
+                //Console.WriteLine("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
+                actionMssg = string.Format("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
 
             }
             else if ((myCard1.CardValue == 7) && dealerCardValue >= 2 && dealerCardValue <= 7)
             {
                 handActhion = new Split();
                 Console.WriteLine("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
+                actionMssg = string.Format("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
 
             }
             else if (myCard1.CardValue == 8)
             {
                 handActhion = new Split();
-                Console.WriteLine("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
+                //Console.WriteLine("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
+                actionMssg = string.Format("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
 
             }
             else if ((myCard1.CardValue == 9) && (dealerCardValue >= 8 && dealerCardValue <= 9) && dealerCardValue >= 2 && dealerCardValue <= 6)
             {
                 handActhion = new Split();
-                Console.WriteLine("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
+                //Console.WriteLine("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
+                actionMssg = string.Format("Your Pair Hands value is: {0}, Always SPlit on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
 
             }
             else if ((myCard1.CardValue == 9) && (dealerCardValue >= 10 ||  dealerCardValue == 7))
             {
                 handActhion = new Stick();
-                Console.WriteLine("Your Pair Hands value is: {0}, Always Stick on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
+                //Console.WriteLine("Your Pair Hands value is: {0}, Always Stick on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
+                actionMssg = string.Format("Your Pair Hands value is: {0}, Always Stick on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
 
             }
             else if (myCard1.CardValue == 10)
             {
+
+                var RoyalCheck = (myCard1.TheCardType != Card.CardType.Regurlar) ? myCard1.royalCardName(myCard1.TheCardType) : myCard1.getCardName();
+                var DealerRoyalCheck = (myCard1.TheCardType != Card.CardType.Regurlar) ? myCard1.royalCardName(myCard1.TheCardType) : myCard1.getCardName();
                 handActhion = new Stick();
-                Console.WriteLine("Your Pair Hands value is: {0}, Always Stick on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
+               // Console.WriteLine("Your Pair Hands value is: {0}, Always Stick on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, myCard1.getCardName(), myCard2.getCardName(), dealerCardValue);
+                actionMssg = string.Format("Your Pair Hands value is: {0}, Always Stick on a pare of  {1} {2}  vs Dealer card of {3}", myCardVules, RoyalCheck, RoyalCheck, DealerRoyalCheck);
 
             }
             else
             {
                 handActhion = new Hit();
-                Console.WriteLine("Your Soft Hand value is: {0}, Always Hit on a pare of  {1} {2}  ", myCardVules, myCard1.getCardName(), myCard2.getCardName());
+               // Console.WriteLine("Your Soft Hand value is: {0}, Always Hit on a pare of  {1} {2}  ", myCardVules, myCard1.getCardName(), myCard2.getCardName());
+                actionMssg = string.Format("Your Soft Hand value is: {0}, Always Hit on a pare of  {1} {2}  ", myCardVules, myCard1.getCardName(), myCard2.getCardName());
 
             }
+
+            return actionMssg;
         }
     }
 }

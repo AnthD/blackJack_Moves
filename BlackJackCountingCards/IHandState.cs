@@ -9,7 +9,7 @@ namespace BlackJackCountingCards
     interface IHandState
     {
         
-        void doAction(CardContext context);
+        string doAction(CardContext context);
        //IHandActions handActions
        // {
        //     get;

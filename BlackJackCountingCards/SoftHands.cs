@@ -11,7 +11,8 @@ namespace BlackJackCountingCards
         Card myCard1;
         Card myCard2;
         Card dealerCard;
-        IHandActions handActhion;
+       string actionMssg;
+       IHandActions handActhion;
         public SoftHands(Card Card1, Card Card2, Card DealerCard)
         {
             this.myCard1 = Card1;
@@ -19,7 +20,7 @@ namespace BlackJackCountingCards
             this.dealerCard = DealerCard;
 
         }
-        public void doAction(CardContext context)
+        public string doAction(CardContext context)
         {
             context.setCardState(this);
             //Console.WriteLine("This Soft hands");
@@ -34,44 +35,53 @@ namespace BlackJackCountingCards
             if (myValueCard.CardValue >= 8 || myValueCard.CardValue <= 10)
             {
                 handActhion = new Stick();
-                Console.WriteLine("Your Soft Hand value is: {0}, Always Stick on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
+                //Console.WriteLine("Your Soft Hand value is: {0}, Always Stick on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
+                actionMssg = string.Format("Your Soft Hand value is: {0}, Always Stick on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
 
-            } else if ((myValueCard.CardValue == 2) && dealerCardValue == 6)
+            }
+            else if ((myValueCard.CardValue == 2) && dealerCardValue == 6)
             {
                 handActhion = new DoubleDown();
-                Console.WriteLine("Your Soft Hand value is: {0}, Always Double Down on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
+                //Console.WriteLine("Your Soft Hand value is: {0}, Always Double Down on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
+                actionMssg = string.Format("Your Soft Hand value is: {0}, Always Double Down on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
 
             }
             else if ((myValueCard.CardValue == 3) && dealerCardValue == 5 && dealerCardValue <= 6)
             {
                 handActhion = new DoubleDown();
                 Console.WriteLine("Your Soft Hand value is: {0}, Always Double Down on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
+                actionMssg = string.Format("Your Soft Hand value is: {0}, Always Double Down on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
+
             }
             else if ((myValueCard.CardValue == 4 || myValueCard.CardValue == 5) && dealerCardValue >= 4 && dealerCardValue <= 6)
             {
                 handActhion = new DoubleDown();
-                Console.WriteLine("Your Soft Hand value is: {0}, Always Double Down on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
+               // Console.WriteLine("Your Soft Hand value is: {0}, Always Double Down on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
+                actionMssg = string.Format("Your Soft Hand value is: {0}, Always Double Down on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
 
             }
             else if ((myValueCard.CardValue == 6 || myValueCard.CardValue == 7 ) && (dealerCardValue >= 3 && dealerCardValue <= 6))
             {
                 handActhion = new DoubleDown();
-                Console.WriteLine("Your Soft Hand value is: {0}, Always Double Down on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
+               // Console.WriteLine("Your Soft Hand value is: {0}, Always Double Down on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
+                actionMssg = string.Format("Your Soft Hand value is: {0}, Always Double Down on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
 
             }
             else if ((myValueCard.CardValue == 7) && dealerCardValue == 2 && dealerCardValue == 7 && dealerCardValue == 8)
             {
                 handActhion = new Stick();
-                Console.WriteLine("Your Soft Hand value is: {0}, Always Stick on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
+               // Console.WriteLine("Your Soft Hand value is: {0}, Always Stick on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
+                actionMssg = string.Format("Your Soft Hand value is: {0}, Always Stick on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
 
             }
             else
             {
                 handActhion = new Hit();
                 Console.WriteLine("Your Soft Hand value is: {0}, Always Hit on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
+                actionMssg = string.Format("Your Soft Hand value is: {0}, Always Stick on a {1} and {2}  ", myCardVules, myAceCard.getCardName(), myValueCard.getCardName());
 
             }
-
+            return actionMssg;
         }
     }
 }

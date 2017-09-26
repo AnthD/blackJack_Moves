@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace BlackJackCountingCards
 {
-  public class SuggHandChoice
+   public class HandChoice
     {
 
-        CardContext contextState = new CardContext();
-        HardHands hardHands;
-        SoftHands softHands;
-        PairsHands pairsHands;
 
-        public SuggHandChoice()
+       CardContext contextState = new CardContext();
+       HardHands hardHands;
+        SoftHands softHands;
+         PairsHands pairsHands;
+
+        public HandChoice()
         {
 
         }
+
         public string CompContextCard(Card myCard1, Card myCard2, Card dealerCard)
         {
             if (myCard1 == null || myCard2 == null || dealerCard == null)
@@ -31,23 +33,20 @@ namespace BlackJackCountingCards
             {
                 this.pairsHands = new PairsHands(myCard1, myCard2, dealerCard);
                 return pairsHands.doAction(contextState);
-                
+
             }
             else if (myCard1.TheCardType == Card.CardType.Ace || myCard2.TheCardType == Card.CardType.Ace)
             {
                 softHands = new SoftHands(myCard1, myCard2, dealerCard);
                 return softHands.doAction(contextState);
-                
+
             }
             else
             {
                 hardHands = new HardHands(myCard1, myCard2, dealerCard);
-               return  hardHands.doAction(contextState);
+                return hardHands.doAction(contextState);
 
             }
-
-
         }
-
+        }
     }
-}
